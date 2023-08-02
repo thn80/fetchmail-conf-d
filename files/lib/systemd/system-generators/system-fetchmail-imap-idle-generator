@@ -13,11 +13,11 @@ log() {
 wantdir="$normal/multi-user.target.wants"
 mkdir -p "$wantdir"
 
-for config in /etc/fetchmailrc.d/*.config ; do
+for config in /etc/fetchmail-imap-idle.d/*.config ; do
 	[ -f "$config" ] || continue
 	basename="$(basename "$config")"
 	conf_name="${basename%.config}"
-	ln -s "/lib/systemd/system/fetchmail@.service" "${wantdir}/fetchmail@${conf_name}.service"
+	ln -s "/lib/systemd/system/fetchmail-imap-idle@.service" "${wantdir}/fetchmail-imap-idle@${conf_name}.service"
 
 done
   

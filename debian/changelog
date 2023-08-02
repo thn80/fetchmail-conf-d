@@ -1,5 +1,6 @@
-fetchmail-conf-d (0.1) sierrepo; urgency=medium
+fetchmail-imap-idle-conf-d (0.1) sierrepo; urgency=medium
 
-  * Initial release.
+  * Initial release (by Marek Dopiera <marek@dopiera.pl>).
+  * Changed the package name from fetchmail-conf-d to fetchmail-imap-idle-conf-d.
 
- -- Marek Dopiera <marek@dopiera.pl>  Tue, 31 Oct 2017 21:53:20 +0000
+ -- Thomas Finke <thomas@familie-finke.com>  Wed, 02 Aug 2023 10:37:00 +0000

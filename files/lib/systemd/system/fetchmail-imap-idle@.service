@@ -1,0 +1,14 @@
+[Unit]
+Description=Fetchmail IMAP IDLE for %i
+After=network-online.target
+
+[Service]
+User=root
+ExecStart=/usr/bin/fetchmail -d180 -l104857699 -f /etc/fetchmail-imap-idle.d/%i.config \
+	-N --syslog --sslcertck --pidfile /var/run/fetchmail-imap-idle/%i.pid
+Restart=always
+RuntimeDirectory=fetchmail
+RuntimeDirectoryMode=0750
+
+[Install]
+WantedBy=multi-user.target

@@ -1,16 +1,16 @@
-Source: fetchmail-conf-d
-Maintainer: Marek Dopiera <marek@dopiera.pl>
+Source: fetchmail-imap-idle-conf-d
+Maintainer: Thomas Finke <thomas@familie-finke.com>
 Section: misc
 Priority: optional
 Standards-Version: 3.9.9
 Build-Depends: debhelper (>= 9),
                dh-systemd
 
-Package: fetchmail-conf-d
+Package: fetchmail-imap-idle-conf-d
 Architecture: all
 Depends: ${misc:Depends}
          fetchmail
-Description: Adds a /etc/fetchmailrc.d directory for modularized configuration.
+Description: Adds a /etc/fetchmail-imap-idle.d directory for modularized configuration.
   Every file there translates into a separate fetchmail instance using that
   file. It is useful for spawning per-account fetchmail using IDLE config
-  because fetchmail can't handle multiple configs like thiat.
+  because fetchmail can't handle multiple configs like that.

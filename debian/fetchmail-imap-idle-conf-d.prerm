@@ -1,0 +1,13 @@
+#! /bin/sh
+
+set -e
+
+if [ "$1" = remove ]; then
+	deb-systemd-invoke stop fetchmail-imap-idle@*
+	deb-systemd-invoke disable fetchmail-imap-idle@*
+fi
+
+#DEBHELPER#
+
+exit 0
+
